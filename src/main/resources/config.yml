@@ -1,0 +1,82 @@
+# ===== Saguroko Impers =====
+# Цвета: &c, &e и т.д. Названия цветов для империй - из списка ChatColor:
+# RED, YELLOW, GREEN, BLUE, AQUA, GOLD, LIGHT_PURPLE, DARK_PURPLE, DARK_RED,
+# DARK_GREEN, DARK_BLUE, DARK_AQUA, WHITE, GRAY, DARK_GRAY, BLACK
+
+# Сколько максимум человек в империи (вместе с лидером).
+max-members: 10
+
+# Империи. Можно менять название и цвет, добавлять новые и удалять.
+# У любой империи можно задать свой max-members.
+empires:
+  red:
+    name: "Красные"
+    color: RED
+  yellow:
+    name: "Жёлтые"
+    color: YELLOW
+  green:
+    name: "Зелёные"
+    color: GREEN
+  blue:
+    name: "Синие"
+    color: BLUE
+    # max-members: 10
+
+# Префикс перед ником (виден в табе, над головой и в чате)
+nick-prefix: "[{name}] "
+
+scoreboard:
+  enabled: true
+  title: "&6&lSaguroko Impers"
+  empire-line: "{color}{name} &7({count}/{max})"
+  show-leader: true
+  leader-line: " &7Лидер: &f{leader}"
+  no-leader: "нет"
+
+chat:
+  enabled: true
+  # {prefix} - префикс империи, {player} - ник, {message} - сообщение
+  format: "{prefix}{player}&r: {message}"
+
+messages:
+  prefix: "&6[Империи] &r"
+  no-permission: "&cУ вас нет прав."
+  player-only: "&cЭту команду может использовать только игрок."
+  unknown-empire: "&cТакой империи нет. Доступные: &f{list}"
+  player-not-found: "&cИгрок &f{player} &cне найден (он должен быть онлайн)."
+  not-leader: "&cВы не лидер империи."
+  already-in-empire: "&cИгрок &f{player} &cуже состоит в империи."
+  you-already-in-empire: "&cВы уже состоите в империи."
+  in-other-empire: "&cИгрок &f{player} &cсостоит в другой империи. Сначала уберите его (/empire kick)."
+  not-in-empire: "&cВы не состоите в империи."
+  not-member: "&cИгрок &f{player} &cне состоит в вашей империи."
+  empire-full: "&cВ империи {empire} &cуже максимум участников ({max})."
+  joined: "&aВы вступили в империю {empire}&a."
+  left: "&eВы покинули империю {empire}&e."
+  added: "&aИгрок &f{player} &aдобавлен в империю {empire}&a."
+  added-target: "&aВас добавили в империю {empire}&a."
+  removed: "&eИгрок &f{player} &eудалён из империи {empire}&e."
+  removed-target: "&cВас удалили из империи {empire}&c."
+  leader-set: "&aИгрок &f{player} &aтеперь лидер империи {empire}&a."
+  leader-set-target: "&aВы назначены лидером империи {empire}&a!"
+  leader-removed: "&eУ империи {empire} &eбольше нет лидера."
+  cant-remove-self: "&cСебя удалить нельзя. Используйте /empire leave."
+  reloaded: "&aКонфиг перезагружен."
+  list-header: "&6=== Империи ==="
+  list-line: "{color}{name} &7({count}/{max}) &7Лидер: &f{leader}"
+  members-header: "{color}{name} &7- участники ({count}/{max}):"
+  member-line: " &7- &f{player}{leader-mark}"
+  leader-mark: " &6(лидер)"
+  info: "&7Ваша империя: {empire} &7| Лидер: &f{leader} &7| Участников: &f{count}/{max}"
+  help:
+    - "&6/empire list [империя] &7- список империй и участников"
+    - "&6/empire info &7- ваша империя"
+    - "&6/empire leave &7- покинуть империю"
+    - "&6/empire add <игрок> &7- добавить игрока (лидер)"
+    - "&6/empire remove <игрок> &7- убрать игрока (лидер)"
+    - "&c/empire join <империя> &7- вступить самому (оператор)"
+    - "&c/empire setleader <империя> <игрок> &7- назначить лидера"
+    - "&c/empire removeleader <империя> &7- снять лидера"
+    - "&c/empire kick <игрок> &7- убрать игрока из любой империи"
+    - "&c/empire reload &7- перезагрузить конфиг"

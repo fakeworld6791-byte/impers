@@ -1,0 +1,24 @@
+name: SagurokoImpers
+version: 1.0.0
+main: ru.saguroko.impers.SagurokoImpers
+api-version: '26.3'
+author: Saguroko
+description: Saguroko Impers - империи, лидеры, скорборд и цветные ники
+softdepend: [Essentials, EssentialsChat]
+
+commands:
+  empire:
+    description: Управление империями
+    usage: /<command> help
+    aliases: [imp, empires, империя]
+
+permissions:
+  saguroko.use:
+    description: Базовые команды (list, info, leave, add/remove для лидера)
+    default: true
+  saguroko.join:
+    description: Самостоятельно вступать в империю
+    default: op
+  saguroko.admin:
+    description: Назначать лидеров, кикать, перезагружать конфиг
+    default: op
